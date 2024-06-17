@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Updating Flight Detalis</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    // Ensure the MRVS variable exists
+    var flightDetails = current.variables.flight_details;
+//gs.info("flight details"+current.variables.flight_details.airline);
+//gs.info("flight number"+flight.flight_number);
+    // Check if flightDetails is defined and has records
+    if (flightDetails && flightDetails.length > 0) {
+        // Iterate over each flight detail entry
+        flightDetails.forEach(function(flight) {
+            // Create a new record in the custom table
+            var newTravelRequest = new GlideRecord('x_1040531_travel_0_flight_details'); // Replace with your custom table name
+            newTravelRequest.initialize();
+			gs.info("flight deatil1"+flightDetails.flight_number);
+//gs.info("flight number is"+flight.flight_number);
+            // Set the fields from MRVS data
+           //newTravelRequest.u_requested_by = current.requested_for; // Adjust field name as per your custom table
+            newTravelRequest.airline = flight.airline; // Airline field from MRVS
+            newTravelRequest.flight_number = flight.flight_number; // Flight number from MRVS
+            newTravelRequest.flight_date = flight.flight_date; // Flight date from MRVS
+            newTravelRequest.from_location = flight.from_location; // From location from MRVS
+            newTravelRequest.to_location = flight.to_location; // To location from MRVS
+            newTravelRequest.allowance = flight.allowance; // Allowance from MRVS
+            newTravelRequest.currency = flight.select_currency; // Currency from MRVS
+
+            // Insert the new record into the custom table
+            newTravelRequest.insert();
+        });
+    }
+})(current, previous);
+
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-14 19:58:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>16d9516547724210aeb77f52d16d43f6</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Updating Flight Detalis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_script_16d9516547724210aeb77f52d16d43f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-17 10:30:48</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=16d9516547724210aeb77f52d16d43f6"/>
+</record_update>

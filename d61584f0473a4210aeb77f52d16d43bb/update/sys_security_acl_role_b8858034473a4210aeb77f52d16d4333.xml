@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-12 05:39:52</sys_created_on>
+        <sys_id>b8858034473a4210aeb77f52d16d4333</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1040531_travel_0_travel_request.x_1040531_travel_0.user, itil</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_security_acl display_value="x_1040531_travel_0_travel_request">38858034473a4210aeb77f52d16d4321</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b8858034473a4210aeb77f52d16d4333</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-12 05:39:52</sys_updated_on>
+        <sys_user_role display_value="x_1040531_travel_0.user, itil" name="x_1040531_travel_0.user, itil">161584f0473a4210aeb77f52d16d43ef</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

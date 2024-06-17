@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>120</order>
+        <published_ref/>
+        <question display_value="Airline">0851247847ba4210aeb77f52d16d43ef</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-12 08:04:32</sys_created_on>
+        <sys_id>fe36ec3047fa4210aeb77f52d16d43a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vistara</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>question_choice_fe36ec3047fa4210aeb77f52d16d43a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-12 08:04:32</sys_updated_on>
+        <text>Vistara</text>
+        <value>vistara</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=fe36ec3047fa4210aeb77f52d16d43a3"/>
+</record_update>
