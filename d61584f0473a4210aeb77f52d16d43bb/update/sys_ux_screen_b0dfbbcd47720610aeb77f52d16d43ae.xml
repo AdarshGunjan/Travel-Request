@@ -7,7 +7,7 @@
         <event_mappings>[
     
 ]</event_mappings>
-        <macroponent display_value="Travel Request">6cdfbbcd47720610aeb77f52d16d439b</macroponent>
+        <macroponent display_value="Travel Request Record Page">6cdfbbcd47720610aeb77f52d16d439b</macroponent>
         <macroponent_config>{
     "bare": {
         "type": "JSON_LITERAL",

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_csm_ec_engmnt_center_module">
+    <sn_csm_ec_engmnt_center_module action="INSERT_OR_UPDATE">
+        <applied_filters_icon/>
+        <authentication_type>none</authentication_type>
+        <chat_icon display_value="em-start-chat-icon.svg">169b86b31b0338107cf62026624bcb8e</chat_icon>
+        <close_icon display_value="em-close-icon.svg">95bdcaf31b0338107cf62026624bcbf3</close_icon>
+        <collapse_icon display_value="em-collapse-icon.svg">0ab3d2f71b0338107cf62026624bcb86</collapse_icon>
+        <edit_module>ca94cbd473412010d43171ef64f6a7fb</edit_module>
+        <enable_browser_notification>true</enable_browser_notification>
+        <enable_full_height_expand>true</enable_full_height_expand>
+        <enable_icon_notification>true</enable_icon_notification>
+        <enable_notification_sound>true</enable_notification_sound>
+        <expand_icon display_value="em-expand-icon.svg">7c2e82371b0338107cf62026624bcba4</expand_icon>
+        <filter_menu_icon/>
+        <icon_horizontal_padding>50</icon_horizontal_padding>
+        <icon_vertical_padding>50</icon_vertical_padding>
+        <launch_icon_position>right</launch_icon_position>
+        <launcher_icon display_value="launcher-icon.png">1a3aa6a553586010eafcddeeff7b12c5</launcher_icon>
+        <link_text_color>#4F52BE</link_text_color>
+        <logo display_value="now-icon.png">5807dd6a53002010b595ddeeff7b1202</logo>
+        <name>Demo module 1</name>
+        <navigate_back_icon display_value="em-navigate-back-icon.svg">b8cccab31b0338107cf62026624bcbf5</navigate_back_icon>
+        <portal display_value="Demo module 1">9ec0914847630210aeb77f52d16d4346</portal>
+        <primary_module_color>#4F52BE</primary_module_color>
+        <primary_text_color>#FFFFFF</primary_text_color>
+        <recommendations display_value="Recommendations">1ac0918447630210aeb77f52d16d43cc</recommendations>
+        <search_icon display_value="em-list-search-icon.svg">40e15eb71b0338107cf62026624bcb58</search_icon>
+        <secondary_module_color>#E9EBF7</secondary_module_color>
+        <secondary_text_color>#000000</secondary_text_color>
+        <short_description>New module short description</short_description>
+        <source_code><![CDATA[<script src="https://dev227486.service-now.com/scripts/sn_csm_ec.js?v=5.6"></script>
+<script>
+SN_CSM_EC.init({
+	moduleID: "https://dev227486.service-now.com/#52c0918447630210aeb77f52d16d43cc",
+	loadFeature: SN_CSM_EC.loadEMFeature()
+});
+</script>]]></source_code>
+        <status>inactive</status>
+        <sys_class_name>sn_csm_ec_engmnt_center_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-17 10:00:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>52c0918447630210aeb77f52d16d43cc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Demo module 1</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sn_csm_ec_engmnt_center_module_52c0918447630210aeb77f52d16d43cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-17 10:03:12</sys_updated_on>
+        <tertiary_module_color>#B5DDE5</tertiary_module_color>
+        <tertiary_text_color>#000000</tertiary_text_color>
+        <title>Customer Support</title>
+        <website_urls>www.servicenow.com, www.service-now.com</website_urls>
+    </sn_csm_ec_engmnt_center_module>
+</record_update>

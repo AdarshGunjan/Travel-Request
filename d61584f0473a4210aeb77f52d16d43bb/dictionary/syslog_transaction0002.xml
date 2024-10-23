@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.no_labels=true,nibble_size=500,no_archive=true,no_attachments=true,no_optimize=true,no_tablecheck=true,no_update=true" db_object_id="00fec0ecd9b13110cedf7dffddb48f34" label="Transaction Log Entry" max_length="40" name="syslog_transaction0002" type="collection">
+        <element function_definition="glidefunction:substring(url,43,49)" function_field="true" label="Custom Field Value" max_length="80" name="x_1040531_travel_0_rpt_custom_field_value" read_only="true" type="field_name"/>
+        <element attributes="edge_encryption_enabled=true" function_definition="glidefunction:substring(url,43,49)" function_field="true" label="Demo Field" max_length="1024" name="x_1040531_travel_0_rpt_demo_field" read_only="true" type="url"/>
+    </element>
+</database>

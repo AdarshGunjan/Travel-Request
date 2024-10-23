@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>incident</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Post Incident to sourav's instance</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    try {
+        var r = new sn_ws.RESTMessageV2('x_1040531_travel_0.Integrating Dev instance2', 'Create in instance dev208506');
+        r.setStringParameterNoEscape('desc', current.description);
+        r.setStringParameterNoEscape('short_desc', current.short_description);
+        r.setStringParameterNoEscape('caller_id', current.caller_id);
+	gs.info("Response of line 7");
+        var response = r.execute();
+		gs.info("Response of line 8"+response);
+        var responseBody = response.getBody();
+        var json = responseBody;
+        var obj = JSON.parse(json); //define JSON parsing for the response JSON file to decode
+        var foundsysID = obj.result.sys_id; //decoded dev2 newly created incident sys_id
+        current.correlation_id = foundsysID;//copied the sys_id of dev2 incident to correlation id
+        current.update(); //update the current incient in dev1
+        var httpStatus = response.getStatusCode();
+		gs.info("http status is: "+httpStatus);
+		gs.info("Response body is:"+responseBody);
+
+// 	oauth_profile_id="d6f437bb47a70210aeb77f52d16d4380";
+// 	requestor_context = "adarsh.gunjan";
+// 	requestor_id = "Integration@123";
+// // Setting the OAuth profile and requestor context
+//  oauth_profile_id = "d6f437bb47a70210aeb77f52d16d4380";
+//         requestor_context = "adarsh.gunjan";
+//         requestor_id = "Integration@123";
+
+//         var r1 = new sn_ws.RESTMessageV2('x_1040531_travel_0.Integrating Dev instance2', 'Create in instance dev208506');
+//         r1.setAuthenticationProfile('oauth2', oauth_profile_id); 
+//         r1.setRequestorProfile(requestor_context, requestor_id);
+
+//         var response1 = r1.execute(); 
+//         var responseBody1 = response1.getBody(); 
+//         var httpStatus1 = response1.getStatusCode();
+
+//         gs.info("Second call HTTP Status: " + httpStatus1);
+//         gs.info("Second call Response Body: " + responseBody1);
+
+    } catch (ex) {
+        var message = ex.message;
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 10:17:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>68b30b7b47a30210aeb77f52d16d4392</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Post Incident to sourav's instance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_script_68b30b7b47a30210aeb77f52d16d4392</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-30 12:37:48</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=68b30b7b47a30210aeb77f52d16d4392"/>
+</record_update>

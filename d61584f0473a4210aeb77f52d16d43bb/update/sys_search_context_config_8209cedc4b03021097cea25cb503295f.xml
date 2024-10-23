@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_context_config">
+    <sys_search_context_config action="INSERT_OR_UPDATE">
+        <collapse_attachment>false</collapse_attachment>
+        <enable_exact_match>true</enable_exact_match>
+        <evam_definition display_value="AI Search For Next Search">f78b729b53d801109fa9ddeeff7b1201</evam_definition>
+        <genius_results_limit>1</genius_results_limit>
+        <hit_highlighting>false</hit_highlighting>
+        <log_signals_server_side>false</log_signals_server_side>
+        <name>e-Travel AI Search Configuration</name>
+        <search_engine>ai_search</search_engine>
+        <search_profile display_value="e-travel Search Profile">4a09cedc890302108d836e26c03ddf67</search_profile>
+        <search_results_limit>10</search_results_limit>
+        <show_tab_counts>true</show_tab_counts>
+        <spell_check>true</spell_check>
+        <suggestions_to_show_limit>10</suggestions_to_show_limit>
+        <sys_class_name>sys_search_context_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-23 12:13:16</sys_created_on>
+        <sys_id>8209cedc4b03021097cea25cb503295f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e-Travel AI Search Configuration</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_search_context_config_8209cedc4b03021097cea25cb503295f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-23 12:13:16</sys_updated_on>
+        <ts_index_group/>
+        <view/>
+    </sys_search_context_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=8209cedc4b03021097cea25cb503295f"/>
+</record_update>

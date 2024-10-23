@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1040531_travel_0.hasRoleExactly</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Lab 8.1 A hasRoleExactly server-side logging</description>
+        <name>hasRoleExactly</name>
+        <script><![CDATA[function hasRoleExactly(userSysID, roleString){
+	try{
+		var roleGr= new GlideRecord('sys_user_role');
+		if(roleGr.get('name', roleString)){
+			var role = roleGr.getValue('sys_id');
+
+			var gr = new GlideRecord('sys_user_has_role');
+			gr.addQuery('user', userSysID);
+			gr.addQuery('role', role);
+			gr.query();
+			if(gr.next()){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}catch(error){
+		gs.error("Error in script Include hasRoleExactly: "+error);
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-22 11:37:25</sys_created_on>
+        <sys_id>5b3347a547230210aeb77f52d16d43d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>hasRoleExactly</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_script_include_5b3347a547230210aeb77f52d16d43d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-22 11:37:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

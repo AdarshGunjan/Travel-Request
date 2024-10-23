@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page_route_map">
+    <sp_page_route_map action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>10</order>
+        <portals>9ec0914847630210aeb77f52d16d4346</portals>
+        <route_from_page display_value="csm_case_task_ticket">3f873f760f220010035531ef68767ebb</route_from_page>
+        <route_to_page display_value="ec_case_task_details">98cddc3c53c82010807bddeeff7b12be</route_to_page>
+        <short_description>EC Case Task Page Route</short_description>
+        <sys_class_name>sp_page_route_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-17 10:00:26</sys_created_on>
+        <sys_id>76c0d14847630210aeb77f52d16d43ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3f873f760f220010035531ef68767ebb</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sp_page_route_map_76c0d14847630210aeb77f52d16d43ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-17 10:00:26</sys_updated_on>
+    </sp_page_route_map>
+</record_update>

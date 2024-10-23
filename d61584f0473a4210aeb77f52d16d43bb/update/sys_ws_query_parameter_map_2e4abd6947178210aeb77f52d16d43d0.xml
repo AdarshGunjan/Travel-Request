@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter_map">
+    <sys_ws_query_parameter_map action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ws_query_parameter_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-09 18:36:55</sys_created_on>
+        <sys_id>2e4abd6947178210aeb77f52d16d43d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>f2ba6419475b0210aeb77f52d16d431a</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_map_2e4abd6947178210aeb77f52d16d43d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-09 18:36:55</sys_updated_on>
+        <web_service_operation display_value="demo2 (v2)">aa4af5e547178210aeb77f52d16d438c</web_service_operation>
+        <web_service_query_parameter display_value="employee_number">f2ba6419475b0210aeb77f52d16d431a</web_service_query_parameter>
+    </sys_ws_query_parameter_map>
+</record_update>

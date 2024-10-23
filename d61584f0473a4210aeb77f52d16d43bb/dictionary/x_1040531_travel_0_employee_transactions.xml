@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="28075a37470bc210aeb77f52d16d4395" label="Employee transactions" max_length="40" name="x_1040531_travel_0_employee_transactions" type="collection">
+        <element label="Transaction Date/Time" max_length="40" name="transaction_date_time" type="glide_date_time"/>
+        <element label="Employee Name" max_length="40" name="employee_name" type="string"/>
+        <element label="Transaction Message" max_length="40" name="transaction_message" type="string_full_utf8"/>
+        <element label="Employee Number" max_length="40" name="employee_number" type="string"/>
+    </element>
+</database>

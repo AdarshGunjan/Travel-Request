@@ -36,8 +36,8 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Hi&nbsp;</p>
-<p>Your request has successfully Submitted</p>
+        <message_html><![CDATA[<p>Hi ${requested_for.manager},</p>
+<p>You got a new approval ${number}</p>
 <p>${mail_script:Approval}</p>
 <p>&nbsp;</p>]]></message_html>
         <message_list/>
@@ -53,7 +53,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Approval Request</subject>
+        <subject>Approval Request ${number}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -61,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>49391e5247364610aeb77f52d16d4360</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Trav Req for Approval</sys_name>
         <sys_overrides/>
         <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
@@ -69,9 +69,9 @@
         <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
         <sys_update_name>sysevent_email_action_49391e5247364610aeb77f52d16d4360</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-17 08:36:58</sys_updated_on>
+        <sys_updated_on>2024-06-24 10:26:22</sys_updated_on>
         <sys_version>2</sys_version>
-        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <template display_value="Employee notification template">1462e7ca918a3010f877b1d70a4d6a3d</template>
         <type>email</type>
         <weight>0</weight>
     </sysevent_email_action>

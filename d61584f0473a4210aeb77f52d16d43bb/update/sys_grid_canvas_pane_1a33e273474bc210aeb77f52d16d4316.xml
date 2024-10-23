@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="New Tab 2">14336e33474bc210aeb77f52d16d4343</grid_canvas>
+        <height>16</height>
+        <portal_widget display_value="Created 2024-07-04 04:06:24">5e33e273474bc210aeb77f52d16d4313</portal_widget>
+        <posx>0</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 11:06:24</sys_created_on>
+        <sys_id>1a33e273474bc210aeb77f52d16d4316</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>14336e33474bc210aeb77f52d16d4343</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_1a33e273474bc210aeb77f52d16d4316</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 11:06:34</sys_updated_on>
+        <width>12</width>
+    </sys_grid_canvas_pane>
+</record_update>

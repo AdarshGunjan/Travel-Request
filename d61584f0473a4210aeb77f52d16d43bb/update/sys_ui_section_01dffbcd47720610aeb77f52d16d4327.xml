@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="01dffbcd47720610aeb77f52d16d4327" sys_domain="global" table="x_1040531_travel_0_travel_request" version="3" view="workspace-ework-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 18:31:59</sys_created_on>
+            <sys_id>c1dffbcd47720610aeb77f52d16d432a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1040531_travel_0_travel_request" sys_domain="global" view="3acf3bcd46720610c9f79658bec57679">01dffbcd47720610aeb77f52d16d4327</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 18:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_by</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 18:31:59</sys_created_on>
+            <sys_id>4ddffbcd47720610aeb77f52d16d4329</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1040531_travel_0_travel_request" sys_domain="global" view="3acf3bcd46720610c9f79658bec57679">01dffbcd47720610aeb77f52d16d4327</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 18:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 18:31:59</sys_created_on>
+            <sys_id>49dffbcd47720610aeb77f52d16d432a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1040531_travel_0_travel_request" sys_domain="global" view="3acf3bcd46720610c9f79658bec57679">01dffbcd47720610aeb77f52d16d4327</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 18:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_allowance</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-13 18:31:59</sys_created_on>
+            <sys_id>41dffbcd47720610aeb77f52d16d4329</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1040531_travel_0_travel_request" sys_domain="global" view="3acf3bcd46720610c9f79658bec57679">01dffbcd47720610aeb77f52d16d4327</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-13 18:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <authentication_type>oauth2</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Sourav's instance User">e11fee7f47230210aeb77f52d16d43c2</basic_auth_profile>
+        <basic_auth_user/>
+        <description>This is a rest message used to create an incident in another {https://dev208506.service-now.com/(sourav mohanty's)} pdi, if there is an  incident creted i n my instance(https://dev227486.service-now.com/).</description>
+        <name>Integrating Dev instance2</name>
+        <oauth2_profile display_value="OAuth Coming from Sourav's PDI default_profile">a995b37347a70210aeb77f52d16d43d4</oauth2_profile>
+        <protocol_name/>
+        <rest_endpoint>https://dev208506.service-now.com/api/now/table/incident</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 08:29:00</sys_created_on>
+        <sys_id>70ec2ebb47230210aeb77f52d16d43b5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Integrating Dev instance2</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_rest_message_70ec2ebb47230210aeb77f52d16d43b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-29 13:43:22</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

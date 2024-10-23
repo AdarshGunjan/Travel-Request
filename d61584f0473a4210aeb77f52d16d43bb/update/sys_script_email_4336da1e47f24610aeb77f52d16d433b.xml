@@ -2,46 +2,75 @@
     <sys_script_email action="INSERT_OR_UPDATE">
         <name>Approval</name>
         <new_lines_to_html>false</new_lines_to_html>
-        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
-          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
-          /* Optional GlideRecord */ event) {
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
 
-          var requester = current.variables.requested_by.getDisplayValue();
-  var company = current.variables.company.getDisplayValue();
-    var total_allowance = current.variables.total_allowance.getDisplayValue();
-     var record = new GlideRecord('sc_req_item');
+    var requester = current.variables.requested_by.getDisplayValue();
+   // var company = current.variables.requested_by.company.getDisplayValue();
+  //  var total_allowance = current.variables.total_allowance.getDisplayValue();
+ 
+    template.print("<br>" + "Requested by    " +" "+ requester);
+   // template.print("<br>" + "Company              " +" "+ company);
+   // template.print("<br>" + "Total Allowance     " +" "+ total_allowance);
+    var record = new GlideRecord('sc_req_item');
     var sysCurrentRecordSysId = current.sys_id;
     record.addQuery('sys_id', sysCurrentRecordSysId);
     record.query();
     while (record.next()) {
-var obj = JSON.parse(record.variables.flight_details); //update with your variable name
-    for(var i=0; i<obj.length; i++) {
-        template.print("<br>");
-    template.print("Requested by    "+requester);
-    template.print("<br>");
-    template.print("Company              "+company);
-    template.print("<br>");
-    template.print("Total Allowance     "+total_allowance);
-    template.print('<br/>' + 'Allowance ' + obj[i].allowance); //These are my variables and you can copy and paste this line to add more
-    template.print('<br/>' + 'Flight Number ' + obj[i].flight_number);
+       
+        var obj = JSON.parse(record.variables.flight_details);
+       if (obj.length > 0) {
+            // Start the table
+            template.print('<br/><table border="1" style="border-collapse: collapse; width: 100%;">');
+            template.print('<tr><th>Airline</th><th>Flight Number</th><th>Flight Date</th><th>From Location</th><th>To Location</th><th>Allowance</th></tr>');
+ 
+            for (var i = 0; i < obj.length; i++) {
+                // Fetch the 'from location' name
+                var fromLocationName = getLocationName(obj[i].from_location);
+ 
+                // Fetch the 'to location' name
+                var toLocationName = getLocationName(obj[i].to_location);
+                template.print('<tr>');
+                template.print('<td>' + obj[i].airline + '</td>');
+                template.print('<td>' + obj[i].flight_number + '</td>');
+                template.print('<td>' + obj[i].flight_date + '</td>');
+                template.print('<td>' + fromLocationName + '</td>');
+                template.print('<td>' + toLocationName + '</td>');
+                template.print('<td>' + obj[i].allowance + '</td>');
+                template.print('</tr>');
+            }
+ 
+            // End the table
+            template.print('</table>');
+        }
+    }
+ 
+    function getLocationName(locationSysId) {
+        var locationName = '';
+        if (locationSysId) {
+            var location = new GlideRecord('core_country'); // Adjust to your actual table name
+            if (location.get(locationSysId)) {
+                locationName = location.getDisplayValue();
+            }
+        }
+        return locationName;
+    }
 
-	template.print('<br/>' + 'Flight Date' + obj[i].flight_date);
-    template.print('<br/>' + 'From Location ' + obj[i].from_location);
-    template.print('<br/>' + 'To Location ' + obj[i].to_location);
-    template.print('<br/>' + 'Airline ' + obj[i].airline);
-
-}}})(current, template, email, email_action, event);]]></script>
+})(current, template, email, email_action, event);]]></script>
         <sys_class_name>sys_script_email</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-17 08:06:59</sys_created_on>
         <sys_id>4336da1e47f24610aeb77f52d16d433b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Approval</sys_name>
         <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
         <sys_policy/>
         <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
         <sys_update_name>sys_script_email_4336da1e47f24610aeb77f52d16d433b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-17 08:27:13</sys_updated_on>
+        <sys_updated_on>2024-06-24 09:25:33</sys_updated_on>
     </sys_script_email>
 </record_update>

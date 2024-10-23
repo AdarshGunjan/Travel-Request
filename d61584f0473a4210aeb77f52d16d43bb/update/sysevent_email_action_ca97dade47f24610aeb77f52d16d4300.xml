@@ -37,23 +37,22 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Hi&nbsp;</p>
-<p>Your request has successfully Submitted</p>
-<p>${mail_script:submit}</p>
-<p>&nbsp;</p>]]></message_html>
+<p>Your request ${number} has been successfully Submitted</p>
+<p>${mail_script:submit}</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>request submitted</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>requested_for</recipient_fields>
+        <recipient_fields/>
         <recipient_groups/>
         <recipient_users/>
         <reply_to/>
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Your Travel Request has been submitted successfully</subject>
+        <subject>Your Travel Request ${number} has been submitted successfully</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -61,7 +60,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ca97dade47f24610aeb77f52d16d4300</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>request submitted</sys_name>
         <sys_overrides/>
         <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
@@ -69,9 +68,9 @@
         <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
         <sys_update_name>sysevent_email_action_ca97dade47f24610aeb77f52d16d4300</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-17 08:35:18</sys_updated_on>
+        <sys_updated_on>2024-06-27 04:11:53</sys_updated_on>
         <sys_version>2</sys_version>
-        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <template display_value="Employee notification template">1462e7ca918a3010f877b1d70a4d6a3d</template>
         <type>email</type>
         <weight>0</weight>
     </sysevent_email_action>

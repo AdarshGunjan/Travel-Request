@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_1040531_travel_0_rpt_custom_field_value" label="Custom Field Value" language="en" table="syslog_transaction0003">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_1040531_travel_0_rpt_custom_field_value</element>
+            <help/>
+            <hint/>
+            <label>Custom Field Value</label>
+            <language>en</language>
+            <name>syslog_transaction0003</name>
+            <plural>Custom Field Values</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-05 14:12:10</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Custom Field Value</sys_name>
+            <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+            <sys_update_name>sys_documentation_syslog_transaction0003_x_1040531_travel_0_rpt_custom_field_value_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-05 14:12:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

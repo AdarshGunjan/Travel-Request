@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_1040531_travel_0_travel_request">x_1040531_travel_0_travel_request</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>TRAV</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-12 05:39:46</sys_created_on>
+        <sys_id>df750034473a4210aeb77f52d16d4364</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TRAV</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_number_df750034473a4210aeb77f52d16d4364</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-12 05:39:46</sys_updated_on>
+    </sys_number>
+</record_update>

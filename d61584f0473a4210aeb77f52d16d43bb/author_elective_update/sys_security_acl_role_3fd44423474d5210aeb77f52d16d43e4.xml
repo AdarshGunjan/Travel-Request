@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-10 15:02:28</sys_created_on>
+        <sys_id>3fd44423474d5210aeb77f52d16d43e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.admin</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_security_acl display_value="">bad4c8ef470d5210aeb77f52d16d4335</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_3fd44423474d5210aeb77f52d16d43e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:02:28</sys_updated_on>
+        <sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</application>
+        <file_path/>
+        <instance_id>5a5994611b767d54ba5ceb9b2d4bcb67</instance_id>
+        <instance_name>dev227486</instance_name>
+        <name>sys_security_acl_role_3fd44423474d5210aeb77f52d16d43e4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-10-10 15:02:28</sys_created_on><sys_id>3fd44423474d5210aeb77f52d16d43e4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.admin</sys_name><sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package><sys_policy/><sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope><sys_security_acl display_value="">bad4c8ef470d5210aeb77f52d16d4335</sys_security_acl><sys_update_name>sys_security_acl_role_3fd44423474d5210aeb77f52d16d43e4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-10-10 15:02:28</sys_updated_on><sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>882548884</payload_hash>
+        <record_name>.admin</record_name>
+        <reverted_from/>
+        <source>ca6bdb1a477a4610aeb77f52d16d4381</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-10 15:02:28</sys_created_on>
+        <sys_id>7f054c23474d5210aeb77f52d16d4348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19276f3e4450000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:02:28</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>73054c234b4d5210e900dadf0e2b5148</update_guid>
+        <update_guid_history>73054c234b4d5210e900dadf0e2b5148:882548884</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".admin">46fb1fe747011210aeb77f52d16d4370</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 06:41:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>0a7fc3c6a5be4c92830150e3b82e2fb1</sys_id>
+        <sys_metadata>3fd44423474d5210aeb77f52d16d43e4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.admin</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_parent display_value="">bad4c8ef470d5210aeb77f52d16d4335</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_scope_delete display_value="">b3704f19b42b4c009da716bb8a9015f9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_3fd44423474d5210aeb77f52d16d43e4</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_3fd44423474d5210aeb77f52d16d43e4">7f054c23474d5210aeb77f52d16d4348</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 06:41:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

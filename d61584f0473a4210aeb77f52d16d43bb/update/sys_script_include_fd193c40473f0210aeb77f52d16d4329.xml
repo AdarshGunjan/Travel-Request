@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1040531_travel_0.GenerateRefreshToken</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>This script include is being called from schedule job to refresh the OAuth2.O token used in REST Message(Integrating Dev instance2) for integrating two instances.</description>
+        <name>GenerateRefreshToken</name>
+        <script><![CDATA[var GenerateRefreshToken = Class.create();
+GenerateRefreshToken.prototype = {
+    initialize: function() {},
+    refreshToken: function() {
+        var oAuthClient = new sn_auth.GlideOAuthClient();
+        var parameter = {
+            grant_type: "password",
+            username: "adarsh.gunjan",
+            password: "Integration@123"
+        };
+        var jsonParams = new global.JSON();
+        /* (method) sn_auth.GlideOAuthClient.requestToken(clientName: string, jsonString: string): sn_auth.GlideOAuthClientResponse
+        Retrieves the token for the client, with the request parameters encoded in JSON format*/
+        var tokenResponse = oAuthClient.requestToken('OAuth Coming from Sourav PDI', jsonParams.encode(parameter));
+        /*(method) sn_auth.GlideOAuthClientResponse.getToken(): sn_auth.GlideOAuthToken
+        Retrieves the refresh token*/
+        var tokens = tokenResponse.getToken();
+        var access_token = tokens.getAccessToken();
+		gs.info("Tokens:" + tokens);
+			gs.info("RefreshToken:" + tokens.getRefreshToken());
+
+        gs.setProperty('x_1040531_travel_0.dev.instance.Integration.refreshToken', tokens.getRefreshToken());
+
+		var tokenRequest = new GlideRecord('oauth_credential');
+		tokenRequest.addEncodedQuery('peer.name=OAuth Coming from Sourav PDI');
+		tokenRequest.query();
+		while(tokenRequest.next()){
+			tokenRequest.token_received=access_token;
+			var currentDate= new GlideDate();
+			currentDate.addDaysLocalTime(10);
+			tokenRequest.expires= currentDate;
+			tokenRequest.update();
+		}
+			gs.info("currentDate is"+currentDate);
+         gs.info("AccessToken:" + access_token);
+         gs.info("AccessTokenExpiresIn:" + tokens.getExpiresIn());
+        // gs.info(" RefreshToken:" + tokens.getRefreshToken());
+
+    },
+    type: 'GenerateRefreshToken'
+};
+
+// var GenerateRefreshToken = Class.create();
+// GenerateRefreshToken.prototype = {
+//     initialize: function() {},
+    
+//     refreshToken: function() {
+//         try {
+//             var oAuthClient = new sn_auth.GlideOAuthClient();
+            
+//             // Securely retrieve these values from system properties or use credentials management
+//             var clientName = 'OAuth Coming from Sourav PDI';
+//             var username = 'adarsh.gunjan'; // Replace with secure retrieval method
+//             var password = 'Integration@123'; // Replace with secure retrieval method
+            
+//             var parameter = {
+//                 grant_type: "password",
+//                 username: username,
+//                 password: password
+//             };
+            
+//             // Convert the parameter object to a JSON string
+//             var jsonParams = JSON.stringify(parameter);
+//             var tokenResponse = oAuthClient.requestToken(clientName, jsonParams);
+            
+//             if (tokenResponse.getStatusCode() == 200) {
+//                 var tokens = tokenResponse.getToken();
+//                 var refreshToken = tokens.getRefreshToken();
+                
+//                 // Store the refresh token securely
+//                 gs.setProperty('dev.instance.Integration.refreshToken', refreshToken);
+                
+//                 gs.info("RefreshToken: " + refreshToken);
+//             } else {
+//                 gs.error("Failed to refresh token: " + tokenResponse.getErrorMessage());
+//             }
+//         } catch (e) {
+//             gs.error("Error during token refresh: " + e.message);
+//         }
+//     },
+    
+//     type: 'GenerateRefreshToken'
+// };
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 19:14:52</sys_created_on>
+        <sys_id>fd193c40473f0210aeb77f52d16d4329</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>GenerateRefreshToken</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_script_include_fd193c40473f0210aeb77f52d16d4329</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-30 17:26:02</sys_updated_on>
+    </sys_script_include>
+</record_update>

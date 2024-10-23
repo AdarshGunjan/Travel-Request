@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_1040531_travel_0/get_user_info/demo2</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>demo2</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+   // var pathParams = request.pathParams;
+     var queryParams = request.queryParams;
+    //var tableName = queryParams.tableName;
+    var employee_number = queryParams.employee_number;
+
+    var result = {};
+    var approvalArray = [];
+    var taskArray = [];
+
+    var incGr = new GlideRecord('sys_user');
+    incGr.addQuery('employee_number', employee_number);
+    incGr._query();
+
+    if (incGr.next()) {
+        // var result = {};
+        result.employee_name = incGr.getValue('name');
+        //  response.setBody(result);
+    } else {
+        response.setBody({
+            error: "employee_number does not found"
+        });
+    }
+
+    var approvalGr = new GlideRecord('sysapproval_approver');
+    approvalGr.addQuery('approver', incGr.getValue('sys_id'));
+    approvalGr.query();
+    while (approvalGr.next()) {
+        var answer = {};
+        answer.sys_id = approvalGr.getValue('sys_id');
+        answer.approval_for = approvalGr.getDisplayValue('document_id');
+        answer.state = approvalGr.getValue('state'),
+            answer.approver = approvalGr.getDisplayValue('approver');
+        // userArray.push(answer);
+        approvalArray.push(answer);
+    }
+
+    // response.setBody(userArray);
+    var taskGr = new GlideRecord('task');
+    taskGr.addQuery('assigned_to', incGr.getValue('sys_id'));
+	//taskGr.addQuery('sys_class_name', 'task');
+    taskGr._query();
+
+    while (taskGr.next()) {
+        var tasklist = {};
+        tasklist.number = taskGr.getValue('number');
+        tasklist.assigned_to = taskGr.getDisplayValue('assigned_to');
+        //  userArray.push(tasklist);
+        taskArray.push(tasklist);
+    }
+
+    // response.setBody(userArray);
+    //return answer;
+    response.setBody({
+        Employee: result,
+        Approvals: approvalArray,
+        Tasks: taskArray
+    });
+
+    // Log the transaction to the custom table
+    // var logGr = new GlideRecord('x_1040531_travel_0_employee_transactions');
+    // logGr.initialize();
+    // logGr.employee_number = employee_number;
+    // logGr.transaction_date_time = new GlideDateTime();
+    // logGr.insert();
+
+	var logGr = new GlideRecord('x_1040531_travel_0_employee_transactions');
+    logGr.initialize();
+    logGr.setValue('employee_number', employee_number);  // Ensure it's a string
+    logGr.setValue('transaction_date_time', new GlideDateTime());
+    logGr.insert();
+
+  
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1040531_travel_0/v1/get_user_info/demo2</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/demo2</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 09:50:39</sys_created_on>
+        <sys_id>0c08b68547130210aeb77f52d16d43aa</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>demo2</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_ws_operation_0c08b68547130210aeb77f52d16d43aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 18:57:38</sys_updated_on>
+        <web_service_definition display_value="Get User Info">f9557157470f0210aeb77f52d16d430e</web_service_definition>
+        <web_service_version display_value="v1">be3a3de547178210aeb77f52d16d4392</web_service_version>
+    </sys_ws_operation>
+</record_update>

@@ -31,13 +31,13 @@
     var uCompany = new GlideRecord('sys_user');
     uCompany.addQuery('sys_id', current.opened_by);
     uCompany.query();
-	gs.info("opened by"+current.opened_by);
-	gs.info('hi');
+	//gs.info("opened by"+current.opened_by);
+	
     if (uCompany.next()) {
         var companyName = uCompany.company;
 		
     }
-	gs.info("company name is"+companyName);
+	//gs.info("company name is"+companyName);
     var travelRequest = new GlideRecord('x_1040531_travel_0_travel_request');
     travelRequest.initialize();
 
@@ -52,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4a169db047fe4210aeb77f52d16d4319</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Travel Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
@@ -60,7 +60,7 @@
         <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
         <sys_update_name>sys_script_4a169db047fe4210aeb77f52d16d4319</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-13 09:34:15</sys_updated_on>
+        <sys_updated_on>2024-06-18 18:32:23</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

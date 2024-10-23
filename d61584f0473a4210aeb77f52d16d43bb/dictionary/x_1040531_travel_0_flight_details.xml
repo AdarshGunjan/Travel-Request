@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9c6ff06147fe0210aeb77f52d16d43fb" extends="x_1040531_travel_0_travel_request" label="Flight Details" max_length="40" name="x_1040531_travel_0_flight_details" text_index="true" type="collection">
+        <element label="Reference" max_length="32" name="reference" reference="x_1040531_travel_0_travel_request" type="reference"/>
+        <element label="To City" max_length="40" name="to_city" type="string"/>
+        <element label="Allowance" max_length="40" name="allowance" type="string"/>
+        <element label="To Country" max_length="40" name="to_country" reference="core_country" type="reference"/>
+        <element label="Currency" max_length="40" name="currency" type="string"/>
+        <element label="Airline" max_length="40" name="airline" type="string"/>
+        <element label="Flight Number" max_length="40" name="flight_number" type="string"/>
+        <element label="From Country" max_length="40" name="from_country" reference="core_country" type="reference"/>
+        <element label="From City" max_length="40" name="from_city" type="string"/>
+        <element label="Flight Date" max_length="40" name="flight_date" type="glide_date"/>
+        <index name="index">
+            <element name="reference"/>
+        </index>
+    </element>
+</database>

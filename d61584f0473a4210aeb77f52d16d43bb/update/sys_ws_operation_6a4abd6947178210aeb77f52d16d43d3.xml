@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>1187f631479fc210aeb77f52d16d4386</enforce_acl>
+        <http_method>GET</http_method>
+        <name>EmployeeTransaction (v2)</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var pathParams = request.pathParams;
+    // var queryParams = request.queryParams;
+    //var tableName = queryParams.tableName;
+    var employee_number = pathParams.employee_number;
+
+    var result = {};
+    var approvalArray = [];
+    var taskArray = [];
+    var Approvalrecords = 0;
+    var TaskRecords = 0;
+
+    try {
+        var incGr = new GlideRecord('sys_user');
+        incGr.addQuery('employee_number', employee_number);
+        incGr._query();
+
+        //Handling error when employee_number not found.
+        if (!incGr.next()) {
+            logtransaction(employee_number, "N/A", "Employee number not found");
+            //To log the transaction when employee_number does not found.
+            response.setStatus(400);
+            response.setBody({
+                error: "employee_number not found"
+            });
+            return;
+        }
+
+        result.employeeName = incGr.getValue('name'); //printing employeename associated with employee_number.
+
+
+        //var approvalGr = new GlideRecord('sysapproval_approver');
+        /*GlideRecordSecure is a class inherited from GlideRecord that performs the same functions
+    as GlideRecord, and also enforces ACLs. We can also use GlideQuery.withAcls(). 
+	To make ACLs work we need to create another ACL(read, write, delete) at required table label. */
+        var approvalGr = new GlideRecordSecure('sysapproval_approver');
+        var approvalQr = approvalGr.addQuery('approver', incGr.getValue('sys_id'));
+        approvalQr.addOrCondition('sys_created_by', incGr.getValue('user_name'));
+
+        approvalGr.query();
+        while (approvalGr.next()) {
+            var answer = {};
+            answer.sys_id = approvalGr.getValue('sys_id');
+            answer.approval_for = approvalGr.getDisplayValue('document_id');
+            answer.state = approvalGr.getValue('state'),
+                answer.created_by = approvalGr.getValue('sys_created_by');
+            answer.approver = approvalGr.getDisplayValue('approver');
+            // userArray.push(answer);
+            Approvalrecords++;
+            approvalArray.push(answer);
+        }
+
+        // response.setBody(userArray);
+        //var taskGr = new GlideRecord('task');
+        var taskGr = new GlideRecordSecure('task');
+        var taskQr = taskGr.addQuery('assigned_to', incGr.getValue('sys_id'));
+        taskQr.addOrCondition('sys_created_by', incGr.getValue('user_name'));
+        taskGr._query();
+
+        while (taskGr.next()) {
+            var tasklist = {};
+            tasklist.number = taskGr.getValue('number');
+            tasklist.assigned_to = taskGr.getDisplayValue('assigned_to');
+            tasklist.created_by = taskGr.getValue('sys_created_by');
+            //  userArray.push(tasklist);
+            taskArray.push(tasklist);
+        }
+        TaskRecords = taskArray.length;
+
+        // response.setBody(userArray);
+        //return answer;
+        response.setBody({
+            Employee: result,
+            Approvalrecord: Approvalrecords,
+            TaskRecords: TaskRecords,
+            Remark: "It is showing 0 records beacuse i have created acl and used glideRecordsecure to protect this"
+					+"But i haven't created table level ACL for approval and task table that's why it showing 0 Records",
+            Approvals: approvalArray,
+            Tasks: taskArray
+
+        });
+        logtransaction(employee_number, incGr.getValue('name'), "Transaction completed successfully");
+        //To log the completed transaction without any error.
+    } catch (error) {
+        response.setStatus(500);
+        response.setBody({
+            error: error.message
+        });
+
+        logtransaction(employee_number, "N/A", "Error: " + error.message);
+        //To log the catch error transaction.
+    }
+
+    // Log the transaction to the custom table
+    function logtransaction(employeeNumber, employeeName, message) {
+        var logGr = new GlideRecord('x_1040531_travel_0_employee_transactions');
+        // logGr.initialize();
+        // logGr.employee_number = employeeNumber;
+        // logGr.employee_name = employeeName; //incGr.getValue('name');
+        // logGr.transaction_message = message;
+        // logGr.transaction_date_time = new GlideDateTime();
+        // logGr.insert();
+    }
+    // var syslog = new GlideRecord('syslog_transaction');
+    // syslog.initialize();
+    // syslog.total_wait_time = employee_number;//"/api/x_1040531_travel_0/get_user_info/dmo1/1234?api=api";
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1040531_travel_0/v2/get_user_info/EmployeeTransaction/{employee_number}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/EmployeeTransaction/{employee_number}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-09 18:36:55</sys_created_on>
+        <sys_id>6a4abd6947178210aeb77f52d16d43d3</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>EmployeeTransaction (v2)</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_ws_operation_6a4abd6947178210aeb77f52d16d43d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-15 10:05:47</sys_updated_on>
+        <web_service_definition display_value="Get User Info">f9557157470f0210aeb77f52d16d430e</web_service_definition>
+        <web_service_version display_value="v2">224af5e547178210aeb77f52d16d438a</web_service_version>
+    </sys_ws_operation>
+</record_update>

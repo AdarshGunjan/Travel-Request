@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="DELETE">
+        <name>Accept</name>
+        <rest_message_function display_value="Create in instance dev208506">7728b2bb47630210aeb77f52d16d438a</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 09:19:02</sys_created_on>
+        <sys_id>ea19f2fb47630210aeb77f52d16d43ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Accept</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_ea19f2fb47630210aeb77f52d16d43ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-29 09:19:02</sys_updated_on>
+        <value>application/json</value>
+    </sys_rest_message_fn_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</application>
+        <file_path/>
+        <instance_id>5a5994611b767d54ba5ceb9b2d4bcb67</instance_id>
+        <instance_name>dev227486</instance_name>
+        <name>sys_rest_message_fn_headers_ea19f2fb47630210aeb77f52d16d43ab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers"><sys_rest_message_fn_headers action="INSERT_OR_UPDATE"><name>Accept</name><rest_message_function display_value="Create in instance dev208506">7728b2bb47630210aeb77f52d16d438a</rest_message_function><sys_class_name>sys_rest_message_fn_headers</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-29 09:19:02</sys_created_on><sys_id>ea19f2fb47630210aeb77f52d16d43ab</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Accept</sys_name><sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package><sys_policy/><sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope><sys_update_name>sys_rest_message_fn_headers_ea19f2fb47630210aeb77f52d16d43ab</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-29 09:19:02</sys_updated_on><value>application/json</value></sys_rest_message_fn_headers></record_update>]]></payload>
+        <payload_hash>637701771</payload_hash>
+        <record_name>Accept</record_name>
+        <reverted_from/>
+        <source>ca6bdb1a477a4610aeb77f52d16d4381</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 09:19:02</sys_created_on>
+        <sys_id>216a727f47630210aeb77f52d16d43a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190fdc93cdf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-29 09:19:02</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>256a727fcf630210f4ef6a8d114983a3</update_guid>
+        <update_guid_history>256a727fcf630210f4ef6a8d114983a3:637701771</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 09:25:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn_headers">sys_rest_message_fn_headers</sys_db_object>
+        <sys_id>64a35ac83ece4be7b5289a2748d63ca9</sys_id>
+        <sys_metadata>ea19f2fb47630210aeb77f52d16d43ab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Accept</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_parent display_value="Create in instance dev208506">7728b2bb47630210aeb77f52d16d438a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_scope_delete display_value="">b3704f19b42b4c009da716bb8a9015f9</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_headers_ea19f2fb47630210aeb77f52d16d43ab</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_headers_ea19f2fb47630210aeb77f52d16d43ab">216a727f47630210aeb77f52d16d43a4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-29 09:25:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

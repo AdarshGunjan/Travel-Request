@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page_route_map">
+    <sp_page_route_map action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>10</order>
+        <portals>9ec0914847630210aeb77f52d16d4346</portals>
+        <route_from_page display_value="csm_ticket">65285631c3a1120058879f2974d3aeed</route_from_page>
+        <route_to_page display_value="ec_case_details">51ab9a6d870b1010fb4b3a0548cb0b4d</route_to_page>
+        <short_description>EC Ticket Page Route</short_description>
+        <sys_class_name>sp_page_route_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-17 10:00:26</sys_created_on>
+        <sys_id>83c0d14847630210aeb77f52d16d43ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>65285631c3a1120058879f2974d3aeed</sys_name>
+        <sys_package display_value="Travel Request" source="x_1040531_travel_0">d61584f0473a4210aeb77f52d16d43bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Travel Request">d61584f0473a4210aeb77f52d16d43bb</sys_scope>
+        <sys_update_name>sp_page_route_map_83c0d14847630210aeb77f52d16d43ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-17 10:00:26</sys_updated_on>
+    </sp_page_route_map>
+</record_update>
